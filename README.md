@@ -13,6 +13,16 @@ Ensure you have the following installed on your system:
 ## Installation
 
 ```bash
+# Install spells globally
+bun install -g github:codewitchio/spells
+
+# Update
+bun update -g
+```
+
+For local development, install dependencies:
+
+```bash
 bun install
 ```
 
@@ -23,7 +33,7 @@ bun install
 Run the clipper with a YouTube URL, start time, and end time:
 
 ```bash
-bun run clip --url <YOUTUBE_URL> --start <START_TIME> --end <END_TIME>
+spells clip --url <YOUTUBE_URL> --start <START_TIME> --end <END_TIME>
 ```
 
 The tool defaults to **1080p** (or best available < 1080p) and exports to `.webm` (VP9/Opus).
