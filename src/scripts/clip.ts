@@ -3,7 +3,7 @@ import { cancel, intro, isCancel, outro, spinner, text } from "@clack/prompts"
 import { parseTime, sanitizeTitle } from "../util/input"
 import { clipSegment, fetchVideoTitle } from "../util/youtube"
 
-const ensureResponse = (value: string | symbol): string => {
+const ensureResponse = (value: Awaited<ReturnType<typeof text>>): string => {
   if (isCancel(value)) {
     cancel("Operation cancelled.")
     process.exit(0)

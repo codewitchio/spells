@@ -18,8 +18,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@clack/prompts": "^0.11.0",
+    "@clack/prompts": "^1.8.1",
     "fluent-ffmpeg": "^2.1.3"
   }
 }
-

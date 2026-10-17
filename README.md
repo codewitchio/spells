@@ -26,6 +26,26 @@ For local development, install dependencies:
 bun install
 ```
 
+To use your local copy as the global `spells` (edits are live, no reinstall needed):
+
+```bash
+bun remove -g spells  # only if it was installed from GitHub
+bun link              # run inside this folder
+```
+
+# node_modules cleanup
+
+```bash
+spells nuke-modules [folder]  # default: current folder
+```
+
+Lists every `node_modules` under the folder in two groups, each sorted by size:
+
+- **Untouched for 2+ weeks** – pre-selected
+- **Touched recently**
+
+Press Enter to remove the selected ones. "Last touched" is the newest file in the project, ignoring `node_modules`, `.git` and build output.
+
 # Youtube clipper
 
 ## Usage
